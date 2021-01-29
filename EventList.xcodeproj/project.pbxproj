@@ -19,6 +19,7 @@
 		F7D87E7125C3F53800A9E3B9 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D87E7025C3F53800A9E3B9 /* APIConstants.swift */; };
 		F7D87E7525C3F5F900A9E3B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D87E7425C3F5F900A9E3B9 /* User.swift */; };
 		F7D87E7A25C3F69000A9E3B9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D87E7925C3F69000A9E3B9 /* APIManager.swift */; };
+		F7D87E8125C4140F00A9E3B9 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D87E8025C4140F00A9E3B9 /* APIErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		F7D87E7025C3F53800A9E3B9 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		F7D87E7425C3F5F900A9E3B9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F7D87E7925C3F69000A9E3B9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		F7D87E8025C4140F00A9E3B9 /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 		FB1326F46FF8629F8D4CA2CE /* Pods-EventList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventList.release.xcconfig"; path = "Target Support Files/Pods-EventList/Pods-EventList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				F7D87E7925C3F69000A9E3B9 /* APIManager.swift */,
+				F7D87E8025C4140F00A9E3B9 /* APIErrors.swift */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				F7D87E6B25C3E94200A9E3B9 /* SignInViewController.swift in Sources */,
 				F7D87E6725C3E35E00A9E3B9 /* RegisterViewController.swift in Sources */,
 				F7D87E7525C3F5F900A9E3B9 /* User.swift in Sources */,
+				F7D87E8125C4140F00A9E3B9 /* APIErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

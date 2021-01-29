@@ -8,6 +8,8 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    
+    // MARK: - TextFields
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -20,6 +22,7 @@ class RegisterViewController: UIViewController {
     }
     
     
+    // MARK: - Sign Up
     @IBAction func onSignupBtnClick(_ sender: Any) {
         
         let username: String = usernameTextField.text!
@@ -30,9 +33,9 @@ class RegisterViewController: UIViewController {
         APIManager.sharedInstance.callSignupAPI(user: user) {
             (isSuccessful) in
             if isSuccessful  {
-                
+                // Go to Event list screen
             } else {
-                
+                // Stay on this screen and show error message
             }
         }
     }
