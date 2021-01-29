@@ -99,7 +99,6 @@
                                 </state>
                                 <connections>
                                     <action selector="onSignupBtnClick:" destination="hU7-K5-NAu" eventType="touchUpInside" id="Ll1-2a-cde"/>
-                                    <segue destination="vkh-Xm-32K" kind="show" id="5dc-e3-rkP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -112,13 +111,14 @@
                         <outlet property="passwordTextField" destination="l5o-nm-xQg" id="8Cc-4F-Ggm"/>
                         <outlet property="registerBtn" destination="ctU-jz-R8m" id="Ij2-cZ-cwN"/>
                         <outlet property="usernameTextField" destination="cbf-OT-Xft" id="5Sk-aB-eOG"/>
+                        <segue destination="vkh-Xm-32K" kind="show" identifier="signup_success" id="cX4-wF-j6J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4i-WQ-4bX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1636.2318840579712" y="99.776785714285708"/>
         </scene>
-        <!--Event Table View Controller-->
+        <!--Events-->
         <scene sceneID="kz0-ix-E6F">
             <objects>
                 <viewController storyboardIdentifier="event_list" id="vkh-Xm-32K" customClass="EventTableViewController" customModule="EventList" customModuleProvider="target" sceneMemberID="viewController">
@@ -186,7 +186,9 @@
                             <constraint firstAttribute="bottomMargin" secondItem="lIX-sm-Tg0" secondAttribute="bottom" id="rVu-5b-7qW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vR8-bn-ce4"/>
+                    <navigationItem key="navigationItem" title="Events" largeTitleDisplayMode="always" id="vR8-bn-ce4">
+                        <barButtonItem key="backBarButtonItem" title=" " id="3gh-uO-jEb"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="eventTableView" destination="lIX-sm-Tg0" id="cKB-4h-3HI"/>
                         <segue destination="04b-qZ-fHL" kind="show" identifier="showEventDetail" id="11r-tn-HIf"/>
@@ -204,10 +206,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OB-BH-6MV">
-                                <rect key="frame" x="136" y="301" width="143" height="152"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OB-BH-6MV">
+                                <rect key="frame" x="20" y="97" width="374" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9W-lQ-jdF">
+                                <rect key="frame" x="20" y="170" width="47" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlG-MR-N3B">
+                                <rect key="frame" x="20" y="199" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RSVP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmc-72-PaH">
+                                <rect key="frame" x="20" y="305" width="47" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Attending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcc-zb-2DF">
+                                <rect key="frame" x="21" y="266" width="374" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QN2-fE-y9l">
+                                <rect key="frame" x="347" y="305" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbw-f5-5DY">
+                                <rect key="frame" x="20" y="228" width="374" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

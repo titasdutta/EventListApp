@@ -34,15 +34,17 @@ class RegisterViewController: UIViewController {
             (isSuccessful) in
             if isSuccessful  {
                 // Go to Event list screen
-//                guard let eventTableViewController = storyboard?.instantiateViewController(identifier: "event_list") as? EventTableViewController else {
-//                    return
-//                }
-//                present(eventTableViewController, animated:true)
-                
-                self.present(EventTableViewController(), animated: true)
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "signup_success", sender: self)
+                }
                 
             } else {
                 // Stay on this screen and show error message
+                let alert = UIAlertController(title: "Oops ...", message: "Something Went Wrong!", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }
