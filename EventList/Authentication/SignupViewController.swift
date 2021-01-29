@@ -18,8 +18,7 @@ class SignupViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // MARK: - Styling for View Items
-        // Rounded Buttons
-        signupBtn.layer.cornerRadius = 3
+        
     }
 
     

@@ -39,13 +39,14 @@ class APIManager {
     }
     
     
-    func login(user: User, completionHandler: Handler ) {
+    func login(user: User, completionHandler: @escaping Handler ) {
         
         let headers: HTTPHeaders = [
             .contentType("application/json")
         ]
         
-        AF.request(signup_url, method: .post, parameters: user, encoder: JSONParameterEncoder.default, headers: headers)
+        
+        AF.request(login_url, method: .post, parameters: user, encoder: JSONParameterEncoder.default, headers: headers)
             .response {
                 response in debugPrint(response)
                 
@@ -54,12 +55,12 @@ class APIManager {
                     do {
                         let json = try JSONSerialization.jsonObject(with: data!, options: [])
                         if response.response?.statusCode == 200 {
-                            completionHandler(true)
+                            completionHandler(.success(json ))
                         } else {
-                            completionHandler(false)
+                            completionHandler(.failure(.custom(message: "Something went wrong!")))
                         }
                     } catch {
-                        completionHandler(false)
+                        completionHandler(.failure(.custom(message: "Try again!")))
                     }
                 case .failure(let err ):
                     print(err.localizedDescription)

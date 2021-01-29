@@ -9,7 +9,7 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
-    // MARK: - TextFields
+    // MARK: - Signup TextFields
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -29,7 +29,7 @@ class RegisterViewController: UIViewController {
         let email: String = emailTextField.text!
         let password: String = passwordTextField.text!
         
-        let user = User(username: username, email: email, password: password)
+        let user = User(username: username, password: password)
         APIManager.sharedInstance.callSignupAPI(user: user) {
             (isSuccessful) in
             if isSuccessful  {
