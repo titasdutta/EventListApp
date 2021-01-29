@@ -26,25 +26,30 @@ class RegisterViewController: UIViewController {
     @IBAction func onSignupBtnClick(_ sender: Any) {
         
         let username: String = usernameTextField.text!
-        let email: String = emailTextField.text!
+        //let email: String = emailTextField.text!
         let password: String = passwordTextField.text!
         
         let user = User(username: username, password: password)
+        
+        
         APIManager.sharedInstance.callSignupAPI(user: user) {
-            (isSuccessful) in
-            if isSuccessful  {
-                // Go to Event list screen
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "signup_success", sender: self)
-                }
+            (isSuccess) in
+       
+            print(isSuccess)
+            if isSuccess  {
+//                 Go to Event list screen
                 
-            } else {
-                // Stay on this screen and show error message
+                self.performSegue(withIdentifier: "signup_success", sender: self)
+                
+            }
+            else {
+//                 Stay on this screen and show error message
                 let alert = UIAlertController(title: "Oops ...", message: "Something Went Wrong!", preferredStyle: .alert)
-                
+
                 alert.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-                
+
                 self.present(alert, animated: true, completion: nil)
+
             }
         }
     }

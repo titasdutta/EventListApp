@@ -20,20 +20,20 @@ class APIManager {
             .response {
                 response in debugPrint(response)
                 
+                print("response.result: \(response.result)")
                 switch response.result {
-                case .success(let data):
+                case .success:
                     do {
-                        let json = try JSONSerialization.jsonObject(with: data!, options: [])
+                        //let json = try JSONSerialization.jsonObject(with: data!, options: [])
                         if response.response?.statusCode == 200 {
                             completionHandler(true)
                         } else {
                             completionHandler(false)
                         }
-                    } catch {
-                        completionHandler(false)
                     }
-                case .failure(let err ):
-                    print(err.localizedDescription)
+
+                case .failure:
+                    completionHandler(false)
                 }
             }
     }
