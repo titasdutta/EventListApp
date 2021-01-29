@@ -10,7 +10,7 @@ class APIManager {
     
     static let sharedInstance = APIManager()
     
-    func callSignupAPI(user: User) {
+    func callSignupAPI(user: User, completionHandler: @escaping (Bool) -> ()) {
         
         let headers: HTTPHeaders = [
             .contentType("application/json")
@@ -24,9 +24,13 @@ class APIManager {
                 case .success(let data):
                     do {
                         let json = try JSONSerialization.jsonObject(with: data!, options: [])
-                        print(json )
+                        if response.response?.statusCode == 200 {
+                            completionHandler(true)
+                        } else {
+                            completionHandler(false)
+                        }
                     } catch {
-                        print(error.localizedDescription )
+                        completionHandler(false)
                     }
                 case .failure(let err ):
                     print(err.localizedDescription)

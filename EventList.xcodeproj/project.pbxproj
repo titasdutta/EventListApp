@@ -82,18 +82,16 @@
 		F7D87E4F25C3E30F00A9E3B9 /* EventList */ = {
 			isa = PBXGroup;
 			children = (
+				F7D87E7025C3F53800A9E3B9 /* APIConstants.swift */,
 				F7D87E7825C3F67900A9E3B9 /* APIManager */,
+				F7D87E7D25C3FFA200A9E3B9 /* Authentication */,
 				F7D87E7325C3F5EA00A9E3B9 /* User */,
 				F7D87E5025C3E30F00A9E3B9 /* AppDelegate.swift */,
 				F7D87E5225C3E30F00A9E3B9 /* SceneDelegate.swift */,
-				F7D87E5425C3E30F00A9E3B9 /* SignupViewController.swift */,
 				F7D87E5625C3E30F00A9E3B9 /* Main.storyboard */,
 				F7D87E5925C3E31000A9E3B9 /* Assets.xcassets */,
 				F7D87E5B25C3E31000A9E3B9 /* LaunchScreen.storyboard */,
 				F7D87E5E25C3E31000A9E3B9 /* Info.plist */,
-				F7D87E6625C3E35E00A9E3B9 /* RegisterViewController.swift */,
-				F7D87E6A25C3E94200A9E3B9 /* SignInViewController.swift */,
-				F7D87E7025C3F53800A9E3B9 /* APIConstants.swift */,
 			);
 			path = EventList;
 			sourceTree = "<group>";
@@ -112,6 +110,16 @@
 				F7D87E7925C3F69000A9E3B9 /* APIManager.swift */,
 			);
 			path = APIManager;
+			sourceTree = "<group>";
+		};
+		F7D87E7D25C3FFA200A9E3B9 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				F7D87E5425C3E30F00A9E3B9 /* SignupViewController.swift */,
+				F7D87E6A25C3E94200A9E3B9 /* SignInViewController.swift */,
+				F7D87E6625C3E35E00A9E3B9 /* RegisterViewController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		FF27A7AE3894DDE8AE27DA20 /* Frameworks */ = {
