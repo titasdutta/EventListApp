@@ -23,6 +23,8 @@
 		F7D87E9225C4288600A9E3B9 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D87E9125C4288600A9E3B9 /* EventTableViewController.swift */; };
 		F7D87E9625C440C800A9E3B9 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D87E9525C440C800A9E3B9 /* EventTableViewCell.swift */; };
 		F7D87E9A25C4421600A9E3B9 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D87E9925C4421600A9E3B9 /* Event.swift */; };
+		F7D87E9D25C503FF00A9E3B9 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D87E9C25C503FF00A9E3B9 /* Events.swift */; };
+		F7D87EA025C504A100A9E3B9 /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D87E9F25C504A100A9E3B9 /* Displayable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		F7D87E9125C4288600A9E3B9 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		F7D87E9525C440C800A9E3B9 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		F7D87E9925C4421600A9E3B9 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		F7D87E9C25C503FF00A9E3B9 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		F7D87E9F25C504A100A9E3B9 /* Displayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Displayable.swift; sourceTree = "<group>"; };
 		FB1326F46FF8629F8D4CA2CE /* Pods-EventList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventList.release.xcconfig"; path = "Target Support Files/Pods-EventList/Pods-EventList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				F7D87E9925C4421600A9E3B9 /* Event.swift */,
+				F7D87E9C25C503FF00A9E3B9 /* Events.swift */,
+				F7D87E9F25C504A100A9E3B9 /* Displayable.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -272,7 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7D87E9D25C503FF00A9E3B9 /* Events.swift in Sources */,
 				F7D87E7A25C3F69000A9E3B9 /* APIManager.swift in Sources */,
+				F7D87EA025C504A100A9E3B9 /* Displayable.swift in Sources */,
 				F7D87E9625C440C800A9E3B9 /* EventTableViewCell.swift in Sources */,
 				F7D87E5525C3E30F00A9E3B9 /* SignupViewController.swift in Sources */,
 				F7D87E5125C3E30F00A9E3B9 /* AppDelegate.swift in Sources */,

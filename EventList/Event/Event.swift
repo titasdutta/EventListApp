@@ -4,7 +4,7 @@
 //
 
 
-class Event {
+class Event: Codable {
     var id: Int
     var name: String
     var start: String
@@ -20,5 +20,29 @@ class Event {
         self.end = end
         self.location = location
         self.attending = attending
+    }
+}
+
+
+
+extension Event: Displayable {
+    var eventNameText: String { name }
+    
+    var eventLocationText: String {
+        "Location:" + location }
+    
+    var eventDateText: String {
+        "Date: \(start)"
+    }
+    
+    var eventDurationText: String {
+        "\(start) - \(end)"
+    }
+    
+    var attendingNumberText: String {
+        "Attendance: \(String(attending))" }
+
+    var eventList: [String] {
+        ["Test1", "Test2"]
     }
 }

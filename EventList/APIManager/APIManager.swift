@@ -38,7 +38,7 @@ class APIManager {
             }
     }
     
-    
+    // MARK: - LOGIN
     func login(user: User, completionHandler: @escaping Handler ) {
         
         let headers: HTTPHeaders = [
@@ -67,7 +67,6 @@ class APIManager {
                 }
             }
     }
-    
     
      
 }
